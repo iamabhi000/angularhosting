@@ -8,6 +8,7 @@ router.get('/',(req,res)=>
 Employee.find((err,docs)=>{
     if(!err)
     {
+        console.log("employee",docs.pretty())
         return res.send(docs);
     }
     else
